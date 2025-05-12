@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Magnetstatus Anzeige – 3 Schalter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+      }
+
+      .status-container {
+        display: flex;
+        gap: 30px;
+      }
+
+      .status-box {
+        padding: 30px 50px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        transition: background-color 0.5s;
+        width: 220px;
+      }
+
+      .status-on {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .status-off {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .sensor-title {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      .time {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Status der drei Magnet-Schalter</h1>
+    <div class="status-container">
+      <div id="sensor1" class="status-box">
+        <div class="sensor-title">Schalter 1</div>
+        <div class="status-text">Lade...</div>
+        <div class="time"></div>
+      </div>
+      <div id="sensor2" class="status-box">
+        <div class="sensor-title">Schalter 2</div>
+        <div class="status-text">Lade...</div>
+        <div class="time"></div>
+      </div>
+      <div id="sensor3" class="status-box">
+        <div class="sensor-title">Schalter 3</div>
+        <div class="status-text">Lade...</div>
+        <div class="time"></div>
+      </div>
+    </div>
+
+    <script>
+      async function fetchStatus() {
+        try {
+          const response = await fetch("abfrage.php");
+          const data = await response.json();
+
+          for (let i = 1; i <= 3; i++) {
+            const sensorData = data.find((d) => parseInt(d.sensor_id) === i);
+            const box = document.getElementById(`sensor${i}`);
+            const statusText = box.querySelector(".status-text");
+            const timeText = box.querySelector(".time");
+
+            if (sensorData) {
+              const wert = parseFloat(sensorData.wert);
+              const zeit = sensorData.zeit;
+
+              if (wert === 1.0) {
+                statusText.textContent = "Magnet erkannt";
+                box.className = "status-box status-on";
+              } else {
+                statusText.textContent = "Kein Magnet";
+                box.className = "status-box status-off";
+              }
+              timeText.textContent = `Letzte Messung: ${zeit}`;
+            } else {
+              statusText.textContent = "Keine Daten";
+              timeText.textContent = "";
+              box.className = "status-box";
+            }
+          }
+        } catch (error) {
+          console.error("Fehler beim Laden:", error);
+          for (let i = 1; i <= 3; i++) {
+            const box = document.getElementById(`sensor${i}`);
+            box.querySelector(".status-text").textContent = "Fehler beim Laden";
+            box.className = "status-box";
+          }
+        }
+      }
+
+      fetchStatus();
+      setInterval(fetchStatus, 5000);
+    </script>
+  </body>
+</html>

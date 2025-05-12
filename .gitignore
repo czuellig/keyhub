@@ -1,3 +1,5 @@
 .DS_Store
 config.php
 .vscode
+load.php
+db_config.php

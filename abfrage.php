@@ -20,23 +20,56 @@ try {
 }
 
 try {
-    // SQL: Hole den letzten Eintrag für jeden sensor_id (1 bis 3)
-    $sql = "
-        SELECT s1.*
-        FROM sensordata s1
+    // ALLE EINTRÄGE DER LETZTEN 30 TAGE MIT NAMEN
+    $sqlAll = "
+        SELECT 
+            s.id,
+            s.wert,
+            s.zeit,
+            s.sensor_id,
+            n.name AS name
+        FROM 
+            sensordata s
+        LEFT JOIN 
+            namen n ON s.sensor_id = n.id
+        WHERE 
+            s.zeit >= NOW() - INTERVAL 30 DAY
+        ORDER BY 
+            s.zeit DESC
+    ";
+    $stmtAll = $pdo->prepare($sqlAll);
+    $stmtAll->execute();
+    $allData = $stmtAll->fetchAll(PDO::FETCH_ASSOC);
+
+    // LETZTER EINTRAG PRO SENSOR_ID MIT NAMEN
+    $sqlLatest = "
+        SELECT 
+            s1.id,
+            s1.wert,
+            s1.zeit,
+            s1.sensor_id,
+            n.name AS name
+        FROM 
+            sensordata s1
         INNER JOIN (
             SELECT sensor_id, MAX(id) AS max_id
             FROM sensordata
             GROUP BY sensor_id
         ) s2 ON s1.sensor_id = s2.sensor_id AND s1.id = s2.max_id
-        ORDER BY s1.sensor_id ASC
+        LEFT JOIN 
+            namen n ON s1.sensor_id = n.id
+        ORDER BY 
+            s1.sensor_id ASC
     ";
+    $stmtLatest = $pdo->prepare($sqlLatest);
+    $stmtLatest->execute();
+    $latestData = $stmtLatest->fetchAll(PDO::FETCH_ASSOC);
 
-    $stmt = $pdo->prepare($sql);    
-    $stmt->execute();
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    echo json_encode($rows);
+    // JSON-Ausgabe
+    echo json_encode([
+        "latest" => $latestData,
+        "history" => $allData
+    ]);
 
 } catch (PDOException $e) {
     http_response_code(500);

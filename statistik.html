@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Statistik der Schalter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 30px;
+        max-width: 700px;
+        margin: auto;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .stat-container {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 25px 30px;
+        margin-bottom: 25px;
+      }
+
+      .stat-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .stat-value {
+        font-size: 18px;
+        color: #333;
+      }
+
+      button {
+        margin-top: 30px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Statistiken der letzten 7 Tage</h1>
+
+    <div class="stat-container">
+      <div class="stat-title">🌙 Späteste Aktivierung vor 06:00 Uhr</div>
+      <div id="lateNight" class="stat-value">Lade...</div>
+    </div>
+
+    <div class="stat-container">
+      <div class="stat-title">⏱️ Längste Aktivität</div>
+      <div id="mostActive" class="stat-value">Lade...</div>
+    </div>
+
+    <div class="stat-container">
+      <div class="stat-title">🔁 Meiste Aktivierungen/Deaktivierungen</div>
+      <div id="mostToggles" class="stat-value">Lade...</div>
+    </div>
+
+    <button onclick="window.location.href='index2.html'">
+      Zurück zur Übersicht
+    </button>
+
+    <script>
+      async function fetchStats() {
+        try {
+          const response = await fetch("stats.php?from=statistik");
+          const data = await response.json();
+
+          // 1. Späteste Aktivierung
+          const late = data.lateNightActivation;
+          const lateText = late
+            ? `${late.name} wurde zuletzt um ${new Date(
+                late.zeit
+              ).toLocaleTimeString()} aktiviert.`
+            : "Keine nächtlichen Aktivierungen.";
+          document.getElementById("lateNight").textContent = lateText;
+
+          // 2. Längste Aktivität
+          const active = data.mostActiveSensor;
+          const seconds = parseInt(active?.total_active_seconds || 0, 10);
+          const duration = new Date(seconds * 1000).toISOString().substr(11, 8); // hh:mm:ss
+          const activeText = active
+            ? `${active.name} war insgesamt ${duration} aktiv.`
+            : "Keine Aktivität gefunden.";
+          document.getElementById("mostActive").textContent = activeText;
+
+          // 3. Meiste Umschaltungen
+          const toggle = data.mostToggles;
+          const toggleText =
+            toggle && toggle.toggles > 0
+              ? `${toggle.name} wurde ${toggle.toggles} mal ein-/ausgeschaltet.`
+              : "Keine Umschaltungen gefunden.";
+          document.getElementById("mostToggles").textContent = toggleText;
+        } catch (err) {
+          console.error("Fehler beim Laden der Statistiken:", err);
+          document
+            .querySelectorAll(".stat-value")
+            .forEach((el) => (el.textContent = "Fehler beim Laden."));
+        }
+      }
+
+      fetchStats();
+    </script>
+  </body>
+</html>

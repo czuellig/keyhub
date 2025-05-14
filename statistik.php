@@ -10,7 +10,7 @@ if (!isset($_SESSION["eingeloggt"])) {
   <head>
     <meta charset="UTF-8" />
     <title>Statistik der Schalter</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/omi5rsz.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script defer src="statistics.js"></script>

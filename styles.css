@@ -1,0 +1,396 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F7F7;
+    font-family: 'forma-djr-display', sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 1000px;
+    padding: 30px 30px 0px 30px;
+    box-sizing: border-box;
+  }
+
+  .content-box {
+    background-color: rgba(144, 163, 202, 0.6);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 30px 30px 0 30px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .logo {
+    width: 80%;
+    margin-bottom: 100px;
+  }
+
+  h1 {
+    color: #000;
+    letter-spacing: 0.1em;
+    padding-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 35px;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 0.1em;
+  }
+
+  .livia {
+    background-color: rgba(146, 204, 132);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .cédi {
+    background-color: #C7E3FF;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .pepe {
+    background-color: #FFE1AD;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .history-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background-color: #E8E8E8;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.483) 0px 0px 5px;
+    letter-spacing: 0.1em;
+  }
+  
+  .history-button:hover {
+    background-color: #B8B8B8;
+  }
+
+  .statistics-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    padding-left: 15px;
+    margin-bottom: 100px;
+    border-radius: 12px;
+    background-color: #E8E8E8;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.483) 0px 0px 5px;
+    letter-spacing: 0.1em;
+  }
+  
+  .statistics-button:hover {
+    background-color: #B8B8B8;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    background-color: #E8E8E8;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.483) 0px 0px 5px;
+    letter-spacing: 0.1em;
+  }
+  
+  .back-button:hover{
+    background-color: #B8B8B8;
+  }
+  
+  .history-entry {
+    height: 150px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-direction: column;
+  }
+  
+  .history-header {
+    height: 40%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+  
+  .history-body {
+    height: 60%;
+    background-color: rgba(146, 204, 132, 1);
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: 0.1em;
+  }
+  
+  .nachtschwaermer-header,
+  .couchpotato-header,
+  .pendler-header {
+    height: 40%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  .nachtschwaermer-body,
+  .couchpotato-body,
+  .pendler-body {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  .pendler-body {
+    background-color: #FFE1AD;
+  }
+
+  .nachtschwaermer-body {
+    background-color: rgba(146, 204, 132, 1);
+  }
+
+  .couchpotato-body {
+    background-color: #C7E3FF;
+  }
+
+  .stats {
+    height: 150px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h5 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+    padding-bottom: 50px;
+    letter-spacing: 0.1em;
+  }
+
+  h6 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+    padding-bottom: 50px;
+    letter-spacing: 0.1em;
+    margin-top: -30px;
+  }
+
+  .custom-input {
+    height: 60px;
+    padding-left: 15px;
+    border-radius: 12px;
+    width:80%;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+ .login-button { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    padding-left: 15px;
+    margin-bottom: 60px;
+    margin-top: 120px;
+    border-radius: 12px;
+    background-color: #E8E8E8;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.483) 0px 0px 5px;
+    letter-spacing: 0.1em;
+  }
+
+  .login-button:hover{
+    background-color: #B8B8B8;
+  } */
+
+/* === Grundlayout & Schrift === */
+/* === Grundlayout === */
+body {
+  font-family: "futura-pt", sans-serif;
+  background-color: #f9f9f9;
+  color: pink;
+  margin: 0;
+  padding: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* === Tabellen-Styles (für Magnetstatus Verlauf) === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  text-align: left; /* Alles linksbündig */
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+  text-align: left; /* Überschriften links ausrichten */
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Magnetstatus Farben */
+.magnet-on {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.magnet-off {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* === Back-Button (allgemein nutzbar) === */
+.back-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #45a049;
+}
+
+/* === Statistik-Erweiterung === */
+.stat-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+  margin-bottom: 1000px;
+}
+
+.stat-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.stat-value {
+  font-size: 18px;
+  color: #333;
+}
+
+canvas {
+  max-width: 100%;
+  margin: 40px 0px;
+}
+
+#heatmapChart {
+  width: 100%;
+  margin-top: 400px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-box {
+  width: 100%;
+}

@@ -17,32 +17,52 @@ if (!isset($_SESSION["eingeloggt"])) {
   </head>
   <body>
     <div class="container">
-      
       <div class="content-box">
-        <h1>Statistiken der letzten 7 Tage</h1>
         <a href="index3.php" class="back-button">Zurück zur Übersicht</a>
+        <h1>Statistiken</h1>
+        <h6>Der letzten sieben Tage.</h6>
 
-        <div class="stat-container">
-          <div class="stat-title">🌙 Späteste Aktivierung vor 06:00 Uhr</div>
-          <div id="lateNight" class="stat-value">Lade...</div>
+        <!-- Nachtschwärmer -->
+        <div class="stats">
+          <div class="nachtschwaermer-header">
+            <h4>Nachtschwärmer 🌙</h4>
+          </div>
+          <div class="nachtschwaermer-body">
+            <h2 id="lateNight">Lade...</h2>
+          </div>
         </div>
+        <h5>... kam vor 06:00 Uhr nach Hause.</h5>
 
-        <div class="stat-container">
-          <div class="stat-title">⏱️ Längste Aktivität</div>
-          <div id="mostActive" class="stat-value">Lade...</div>
+        <!-- Couchpotato -->
+        <div class="stats">
+          <div class="couchpotato-header">
+            <h4>Couchpotato 🛁</h4>
+          </div>
+          <div class="couchpotato-body">
+            <h2 id="mostActive">Lade...</h2>
+          </div>
         </div>
+        <h5>... verbrachte am längsten Zeit zuhause.</h5>
 
-        <div class="stat-container">
-          <div class="stat-title">🔁 Meiste Aktivierungen</div>
-          <div id="mostActivations" class="stat-value">Lade...</div>
+        <!-- Pendler:in -->
+        <div class="stats">
+          <div class="pendler-header">
+            <h4>Pendler:in 🚂</h4>
+          </div>
+          <div class="pendler-body">
+            <h2 id="mostActivations">Lade...</h2>
+          </div>
         </div>
+        <h5>... hatte die meisten Aktivierungen.</h5>
 
+        <!-- Heatmap -->
         <div class="stat-container">
-          <div class="stat-title">🔥 Aktivierungen nach Stunde (gestapelte Heatmap)</div>
-          <canvas id="heatmapChart" height="100"></canvas>
+          <h1>Aktivierungen nach Stunde</h1>
+          <canvas id="heatmapChart"></canvas>
         </div>
 
       </div>
     </div>
   </body>
 </html>
+

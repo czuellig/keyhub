@@ -13,26 +13,21 @@ if (!isset($_SESSION["eingeloggt"])) {
     <title>Magnetstatus Verlauf</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/omi5rsz.css"> 
-    <script src="history.js"></script> <!-- Einmaliger Verweis auf das Skript -->
+    <script defer src="history.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="content-box">
-        <h1>Verlauf der Magnet-Schalter</h1>
+        <!-- <img src="graphics/logo.png" alt="Logo" class="logo" /> -->
         <a class="back-button" href="index3.php">Zurück zur Live-Ansicht</a>
-        <table id="historyTable">
-          <thead>
-            <tr>
-              <th>Zeitpunkt</th>
-              <th>Sensor</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Inhalte werden per JavaScript geladen -->
-          </tbody>
-        </table>
+        <h1>Vergangene Einträge</h1>
+
+        <!-- Dynamische Historie wird hier reingerendert -->
+        <div id="historyContainer">
+          <!-- JS fügt hier history-entry-Blöcke ein -->
+        </div>
       </div>
     </div>
   </body>
 </html>
+

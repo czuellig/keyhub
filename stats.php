@@ -26,54 +26,80 @@ try {
     $stmtLate->execute();
     $lateNightResult = $stmtLate->fetch(PDO::FETCH_ASSOC);
 
-    // 2. Sensor mit längster Aktivierungszeit (wert=1) in den letzten 7 Tagen
-   $sqlActiveTime = "
-    SELECT sensor_id, name, SUM(duration) AS total_active_seconds FROM (
-        SELECT 
-            s.sensor_id,
-            n.name,
-            s.zeit AS zeitpunkt,
-            LEAD(s.zeit) OVER (PARTITION BY s.sensor_id ORDER BY s.zeit) AS next_time,
-            s.wert,
-            TIMESTAMPDIFF(SECOND, s.zeit, LEAD(s.zeit) OVER (PARTITION BY s.sensor_id ORDER BY s.zeit)) AS duration
-        FROM sensordata s
-        LEFT JOIN namen n ON s.sensor_id = n.id
-        WHERE s.zeit >= NOW() - INTERVAL 7 DAY
-    ) AS t
-    WHERE wert = 1 AND duration IS NOT NULL
-    GROUP BY sensor_id
-    ORDER BY total_active_seconds DESC
-    LIMIT 1
-";
-    $stmtActive = $pdo->prepare($sqlActiveTime);
-    $stmtActive->execute();
-    $activeResult = $stmtActive->fetch(PDO::FETCH_ASSOC);
-
-    // 3. Meiste Umschaltungen in den letzten 7 Tagen
-    $sqlToggleCounts = "
-        SELECT name, sensor_id, COUNT(*) AS toggles FROM (
+    // 2. Sensor mit längster Aktivierungszeit
+    $sqlActiveTime = "
+        SELECT sensor_id, name, SUM(duration) AS total_active_seconds FROM (
             SELECT 
                 s.sensor_id,
                 n.name,
+                s.zeit AS zeitpunkt,
+                LEAD(s.zeit) OVER (PARTITION BY s.sensor_id ORDER BY s.zeit) AS next_time,
                 s.wert,
-                LAG(s.wert) OVER (PARTITION BY s.sensor_id ORDER BY s.zeit) AS prev_wert
+                TIMESTAMPDIFF(SECOND, s.zeit, LEAD(s.zeit) OVER (PARTITION BY s.sensor_id ORDER BY s.zeit)) AS duration
             FROM sensordata s
             LEFT JOIN namen n ON s.sensor_id = n.id
             WHERE s.zeit >= NOW() - INTERVAL 7 DAY
         ) AS t
-        WHERE t.prev_wert IS NOT NULL AND t.wert != t.prev_wert
+        WHERE wert = 1 AND duration IS NOT NULL
         GROUP BY sensor_id
-        ORDER BY toggles DESC
+        ORDER BY total_active_seconds DESC
         LIMIT 1
     ";
-    $stmtToggles = $pdo->prepare($sqlToggleCounts);
-    $stmtToggles->execute();
-    $toggleResult = $stmtToggles->fetch(PDO::FETCH_ASSOC);
+    $stmtActive = $pdo->prepare($sqlActiveTime);
+    $stmtActive->execute();
+    $activeResult = $stmtActive->fetch(PDO::FETCH_ASSOC);
+
+    // 3. Meiste Aktivierungen (0 -> 1)
+    $sqlActivations = "
+        SELECT t.sensor_id, n.name, COUNT(*) AS activation_count
+        FROM (
+            SELECT 
+                s.sensor_id,
+                s.wert,
+                LAG(s.wert) OVER (PARTITION BY s.sensor_id ORDER BY s.zeit) AS previous_wert
+            FROM sensordata s
+            WHERE s.zeit >= NOW() - INTERVAL 7 DAY
+        ) t
+        JOIN namen n ON t.sensor_id = n.id
+        WHERE t.previous_wert = 0 AND t.wert = 1
+        GROUP BY t.sensor_id, n.name
+        ORDER BY activation_count DESC
+        LIMIT 1
+    ";
+    $stmtActivations = $pdo->prepare($sqlActivations);
+    $stmtActivations->execute();
+    $activationResult = $stmtActivations->fetch(PDO::FETCH_ASSOC);
+
+// 4. Aktivierungen pro Stunde und Sensor (für gestapelte Heatmap)
+$sqlHourly = "
+    SELECT 
+        HOUR(s.zeit) AS stunde,
+        s.sensor_id,
+        n.name,
+        COUNT(*) AS anzahl
+    FROM (
+        SELECT 
+            sensor_id,
+            zeit,
+            wert,
+            LAG(wert) OVER (PARTITION BY sensor_id ORDER BY zeit) AS vorher
+        FROM sensordata
+        WHERE zeit >= NOW() - INTERVAL 7 DAY
+    ) s
+    JOIN namen n ON s.sensor_id = n.id
+    WHERE s.vorher = 0 AND s.wert = 1
+    GROUP BY HOUR(s.zeit), s.sensor_id, n.name
+    ORDER BY stunde ASC
+";
+$stmtHourly = $pdo->prepare($sqlHourly);
+$stmtHourly->execute();
+$hourlyData = $stmtHourly->fetchAll(PDO::FETCH_ASSOC);
 
     echo json_encode([
         "lateNightActivation" => $lateNightResult,
         "mostActiveSensor" => $activeResult,
-        "mostToggles" => $toggleResult
+        "mostActivations" => $activationResult,
+        "hourlyHeatmap" => $hourlyData
     ]);
 
 } catch (PDOException $e) {

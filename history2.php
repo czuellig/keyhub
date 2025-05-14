@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["eingeloggt"])) {
+  header("Location: index3.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -79,7 +86,7 @@
       </tbody>
     </table>
 
-    <a class="back-button" href="index2.html">Zurück zur Live-Ansicht</a>
+    <a class="back-button" href="index3.php">Zurück zur Live-Ansicht</a>
 
     <script>
       async function loadHistory() {

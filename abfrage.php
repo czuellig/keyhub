@@ -1,10 +1,5 @@
 <?php
 
-/*************************************************************
- * Kap. 14 MC -> Dataviz 
- * unload.php
- **************************************************************/
-
 header('Content-Type: application/json');
 
 // Datenbankverbindung einbinden

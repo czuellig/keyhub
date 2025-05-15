@@ -24,38 +24,27 @@ if (!isset($_SESSION["eingeloggt"])) {
         <h1>Statistiken</h1>
         <h6>Der letzten sieben Tage.</h6>
 
-        <!-- Nachtschwärmer -->
-        <div class="stats">
-          <div class="nachtschwaermer-header">
-            <h4>Nachtschwärmer 🌙</h4>
-          </div>
-          <div class="nachtschwaermer-body">
-            <h2 id="lateNight">Lade...</h2>
-          </div>
-        </div>
-        <h5>... kam vor 06:00 Uhr nach Hause.</h5>
+<!-- PENDLER:IN -->
+<div class="stats">
+  <div class="nachtschwaermer-header"></div>
+  <div class="nachtschwaermer-body"></div>
+</div>
+<h6 id="nachtschwaermer-detail" class="stat-detail"></h6>
 
-        <!-- Couchpotato -->
-        <div class="stats">
-          <div class="couchpotato-header">
-            <h4>Couchpotato 🛁</h4>
-          </div>
-          <div class="couchpotato-body">
-            <h2 id="mostActive">Lade...</h2>
-          </div>
-        </div>
-        <h5>... verbrachte am längsten Zeit zuhause.</h5>
+<!-- COUCHPOTATO -->
+<div class="stats">
+  <div class="couchpotato-header"></div>
+  <div class="couchpotato-body"></div>
+</div>
+<h6 id="couchpotato-detail" class="stat-detail"></h6>
 
-        <!-- Pendler:in -->
-        <div class="stats">
-          <div class="pendler-header">
-            <h4>Pendler:in 🚂</h4>
-          </div>
-          <div class="pendler-body">
-            <h2 id="mostActivations">Lade...</h2>
-          </div>
-        </div>
-        <h5>... hatte die meisten Aktivierungen.</h5>
+<!-- NACHTSCHWÄRMER -->
+<div class="stats">
+  <div class="pendler-header"></div>
+  <div class="pendler-body"></div>
+</div>
+<h6 id="pendler-detail" class="stat-detail"></h6>
+
 
         <!-- Heatmap -->
         <div class="stat-container">

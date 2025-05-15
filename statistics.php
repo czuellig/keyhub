@@ -9,6 +9,7 @@ if (!isset($_SESSION["eingeloggt"])) {
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Statistik der Schalter</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/omi5rsz.css">
@@ -18,7 +19,8 @@ if (!isset($_SESSION["eingeloggt"])) {
   <body>
     <div class="container">
       <div class="content-box">
-        <a href="index3.php" class="back-button">Zurück zur Übersicht</a>
+        <img src="/graphics/logo.png" alt="Logo" class="logo" />
+        <a href="index.php" class="back-button">Zurück zur Live-Ansicht</a>
         <h1>Statistiken</h1>
         <h6>Der letzten sieben Tage.</h6>
 

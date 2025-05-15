@@ -1,6 +1,6 @@
 async function fetchStatus() {
   try {
-    const response = await fetch("abfrage.php");
+    const response = await fetch("unload.php");
     const result = await response.json();
     const data = result.latest;
 
@@ -15,11 +15,16 @@ async function fetchStatus() {
       const box = document.createElement("div");
       box.className = "status-box " + (wert === 1.0 ? "status-on" : "status-off");
 
-      box.innerHTML = `
-        <div class="sensor-title">${name}</div>
-        <div class="status-text">${wert === 1.0 ? "Magnet erkannt" : "Kein Magnet"}</div>
-        <div class="time">Letzte Messung: ${zeit}</div>
-      `;
+box.innerHTML = `
+  <div class="status-header">
+    <div class="status-text">${wert === 1.0 ? "Zuhause" : "Nicht da"}</div>
+    <div class="time">Letzte Messung: ${zeit}</div>
+  </div>
+  <div class="status-body">
+    <div class="sensor-title">${name}</div>
+  </div>
+`;
+
 
       container.appendChild(box);
     });
@@ -45,3 +50,4 @@ document.getElementById("nameForm").addEventListener("submit", async function (e
   feedback.textContent = result.message;
   feedback.style.color = result.status === "success" ? "green" : "red";
 });
+

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["eingeloggt"])) {
-  header("Location: index3.php");
+  header("Location: index.php");
   exit;
 }
 ?>
@@ -18,8 +18,8 @@ if (!isset($_SESSION["eingeloggt"])) {
   <body>
     <div class="container">
       <div class="content-box">
-        <!-- <img src="graphics/logo.png" alt="Logo" class="logo" /> -->
-        <a class="back-button" href="index3.php">Zurück zur Live-Ansicht</a>
+        <img src="graphics/logo.png" alt="Logo" class="logo" />
+        <a class="back-button" href="index.php">Zurück zur Live-Ansicht</a>
         <h1>Vergangene Einträge</h1>
 
         <!-- Dynamische Historie wird hier reingerendert -->

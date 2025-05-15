@@ -1,6 +1,6 @@
 async function fetchStats() {
     try {
-      const response = await fetch("stats.php?from=statistik");
+      const response = await fetch("stats_unload.php?from=statistics");
       const data = await response.json();
   
       const late = data.lateNightActivation;

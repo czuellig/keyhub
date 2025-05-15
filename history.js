@@ -1,6 +1,6 @@
 async function loadHistory() {
   try {
-    const response = await fetch("abfrage.php");
+    const response = await fetch("unload.php");
     const result = await response.json();
     const history = result.history;
 

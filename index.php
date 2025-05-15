@@ -17,6 +17,7 @@ if (!isset($_SESSION["eingeloggt"])) {
   <html lang="de">
     <head>
     <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Passwort erforderlich</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/omi5rsz.css">
@@ -49,6 +50,7 @@ $sensorNames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KeyHub Status</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/omi5rsz.css" />
@@ -56,35 +58,17 @@ $sensorNames = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <body>
     <div class="container">
       <div class="content-box">
-        <!-- <img src="/graphics/logo.png" alt="Logo" class="logo" /> -->
+        <img src="/graphics/logo.png" alt="Logo" class="logo" />
         <h1>Zuhause sind</h1>
-
         <div class="status-container" id="statusContainer">
           <p>Lade Daten...</p>
         </div>
-
-        <a class="history-button" href="history2.php">Vergangene Einträge</a>
-        <a class="statistics-button" href="statistik.php">Statistiken</a>
-
-        <h2 style="margin-top: 40px;">Namen der Schalter ändern</h2>
-        <form id="nameForm" class="name-form">
-          <label for="sensor_id">Schalter auswählen:</label>
-          <select name="sensor_id" id="sensor_id">
-            <?php foreach ($sensorNames as $sensor): ?>
-              <option value="<?= htmlspecialchars($sensor['id']) ?>">
-                <?= htmlspecialchars($sensor['name']) ?> (ID <?= $sensor['id'] ?>)
-              </option>
-            <?php endforeach; ?>
-          </select>
-          <label for="new_name">Neuer Name:</label>
-          <input type="text" name="new_name" id="new_name" required />
-          <button type="submit">Namen ändern</button>
-        </form>
-        <p id="nameFeedback" class="feedback"></p>
+        <a class="history-button" href="history.php">Vergangene Einträge</a>
+        <a class="statistics-button" href="statistics.php">Statistiken</a>
+        <a class="change_name-button" href="change_name.php">Name ändern</a>
       </div>
     </div>
-
-    <script src="index3.js"></script>
+    <script src="live_script.js"></script>
   </body>
 </html>
 

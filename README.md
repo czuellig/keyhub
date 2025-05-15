@@ -60,7 +60,7 @@ Dieser Abschnitt ist Unterkapitel A.
 
 ### Komponentenplan
 
-Dieser Abschnitt ist Unterkapitel A.
+![Komponentenplan](/docpics/komponentenplan_keyhub.png)
 
 ### Kommunikationsprozess
 

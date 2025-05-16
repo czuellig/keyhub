@@ -93,7 +93,30 @@ Dieser Abschnitt ist Unterkapitel A.
 
 ### Lernerfolg (Jede:r selber)
 
-Dieser Abschnitt ist Unterkapitel A.
+Cédric:<br>
+Ich habe das erstemal mit einem Arduino MC gearbeitet deshalb war alles damit verbunden neu für mich. Zudem konnte ich viele neuen Learning im bezug auf Datenbanken SQL/PHP machen. Auf folgende zwei Learnings möchte ich gerne tiefer eingehen:<br>
+
+1. Passwort schutz durch PHP
+
+```
+<?php
+ session_start();
+
+require_once("db_config.php");
+// Passwort für den Zugang zur Website
+
+if (!isset($_SESSION["eingeloggt"])) {
+  if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["pw"])) {
+    if ($_POST["pw"] === $passwort) {
+      $_SESSION["eingeloggt"] = true;
+      header("Location: index.php");
+      exit;
+    } else {
+      $fehler = "Falsches Passwort.";
+    }
+  }
+  ?>
+```
 
 ## Video-Dokumentation
 

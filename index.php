@@ -1,6 +1,8 @@
 <?php
 session_start();
-$passwort = "8154";
+
+require_once("db_config.php");
+// Passwort für den Zugang zur Website
 
 if (!isset($_SESSION["eingeloggt"])) {
   if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["pw"])) {

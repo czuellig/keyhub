@@ -96,7 +96,7 @@ Dieser Abschnitt ist Unterkapitel A.
 Cédric:<br>
 Ich habe das erstemal mit einem Arduino MC gearbeitet deshalb war alles damit verbunden neu für mich. Zudem konnte ich viele neuen Learning im bezug auf Datenbanken SQL/PHP machen. Auf folgende zwei Learnings möchte ich gerne tiefer eingehen:<br>
 
-1. Passwort schutz durch PHP
+**1. Passwort schutz durch PHP**
 
 ```
 <?php
@@ -117,6 +117,32 @@ if (!isset($_SESSION["eingeloggt"])) {
   }
   ?>
 ```
+
+Damit potenzielle Einbrecher nicht sehen können ob jemand zuhause ist, haben wir die Website mit php Passwort geschüzt. Diese Möglichkeit war mir davor nicht bekannt (Wurde durch Beni darauf aufmerksamgemacht). Diese Einfach Möglichkeit seine Projkete zuschützen werde ich aufjedenfall in Zukunft wieder verwenden. (Das Passwort befindet sich in der db_config Datei damit es nicht auf Github landet)
+
+**2. Relationale datenbank**
+
+```
+SELECT
+            s1.id,
+            s1.wert,
+            s1.zeit,
+            s1.sensor_id,
+            n.name AS name
+        FROM
+            sensordata s1
+        INNER JOIN (
+            SELECT sensor_id, MAX(id) AS max_id
+            FROM sensordata
+            GROUP BY sensor_id
+        ) s2 ON s1.sensor_id = s2.sensor_id AND s1.id = s2.max_id
+        LEFT JOIN
+            namen n ON s1.sensor_id = n.id
+        ORDER BY
+            s1.sensor_id ASC
+```
+
+Das war das erste Mal das ich mit einer relationalen Datebank gearbeitet habe, und dank ChatGTP war es relativ einfachen. In diesem Fall ist es nötigt damit wir die Namen über die Website ganz einfach updaten können.
 
 ## Video-Dokumentation
 

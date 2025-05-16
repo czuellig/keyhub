@@ -64,11 +64,32 @@ Dieser Abschnitt ist Unterkapitel A.
 
 ### Kommunikationsprozess
 
-Dieser Abschnitt ist Unterkapitel A.
+1. Schlüssel wird zurückgegeben: Reed-Switch wird aktiviert
+2. Wenn PIR-Sensor aktiv: LED leuchtet (5s keine Bewegung LED geht aus)
+3. Datenbank erfasst neuen Eintrag
+4. Website zeigt die Person als zu hause an.
+
+<br>
+
+1. Statistik oder History Seite wird aufgerufen
+2. DB wird abgefragt und Daten der letzten 7 Tagen dargestellt.
 
 ### Umsetzungsprozess
 
-Dieser Abschnitt ist Unterkapitel A.
+1. Hardware-Einrichtung:
+
+   - Verkabelung der Reed-Switch.
+   - Ergänzung der LED's und PIR Sensor.
+
+2. Software-Entwicklung:
+   - WiFi-Einrichtung für die Web-Kommunikation.
+   - Programmierung der Reedschalter.
+   - Programmierung der Datenbank kommunkikation mit Website
+   - Programmierung des PIR Sensor und LED's
+   - Styling mit CSS
+3. Testing
+   - Testläufe zur Datenübertragung und Fehlersuche.
+   - Durchführen von Testwoche
 
 ### Lernerfolg (Jede:r selber)
 

@@ -7,7 +7,7 @@ IM4 Projekt von Livia Vogt und Cédric Züllig. **keyhub** ermöglicht es Famili
 ## Inhaltsverzeichnis
 
 - [1. UX-Konzeption](#ux-konzeption)
-  - [1.1 Insperation](#insperation)
+  - [1.1 Idee](#idee)
   - [1.2 Designentscheid](#designentscheid)
   - [1.3 Vorgehensweise](#vorgehensweise)
   - [1.4 Flussdiagramm](#flussdiagramm)
@@ -23,15 +23,15 @@ IM4 Projekt von Livia Vogt und Cédric Züllig. **keyhub** ermöglicht es Famili
 
 ## UX-Konzeption
 
-### Insperation
+### Idee (Livia)
 
 Hier schreiben wir über das.
 
-### Designentscheid
+### Designentscheid (Livia)
 
 Hier schreiben wir über das.
 
-### Vorgehensweise
+### Vorgehensweise (Livia)
 
 Dieser Abschnitt ist Unterkapitel A.
 
@@ -70,7 +70,7 @@ Dieser Abschnitt ist Unterkapitel A.
 
 Dieser Abschnitt ist Unterkapitel A.
 
-### Lernerfolg
+### Lernerfolg (Jede:r selber)
 
 Dieser Abschnitt ist Unterkapitel A.
 
@@ -78,7 +78,7 @@ Dieser Abschnitt ist Unterkapitel A.
 
 Dieser Abschnitt ist Unterkapitel A.
 
-## Aufgabenteilung
+## Aufgabenteilung (Livia)
 
 Dieser Abschnitt ist Kapitel 1.
 

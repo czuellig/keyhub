@@ -150,7 +150,18 @@ Dieser Abschnitt ist Unterkapitel A.
 
 ## Aufgabenteilung (Livia)
 
-Dieser Abschnitt ist Kapitel 1.
+| Aufgabe          | Wer?   |
+| ---------------- | ------ |
+| Ideenfindung     | beide  |
+| UX-Design        | Livia  |
+| Hardware testing | beide  |
+| Backend          | Cédric |
+| Frontend         | Livia  |
+| 3D Druck         | beide  |
+| Zusammenbau      | Cédric |
+| Video            | Livia  |
+| Dokumentation    | beide  |
+|                  |        |
 
 ## Learnings und Herausforderungen
 

@@ -2,7 +2,8 @@
 
 ![keyhublogo](/docpics/keyhub_logo_white.png)
 
-IM4 Projekt von Livia Vogt und Cédric Züllig. **keyhub** ermöglicht es Familien schnell und einfach zu checken wer zuhause ist. Die smarte Magnetwand fliesst reibungslos in das Familienleben ein ohne gross seine Gewohnheiten anpassen zu müssen.
+IM4 Projekt von Livia Vogt und Cédric Züllig. <br>
+**keyhub** ermöglicht es Familien schnell und einfach zu checken wer zuhause ist. Die smarte Magnetwand fliesst reibungslos in das Familienleben ein ohne gross seine Gewohnheiten anpassen zu müssen.
 
 ## Inhaltsverzeichnis
 
@@ -16,16 +17,18 @@ IM4 Projekt von Livia Vogt und Cédric Züllig. **keyhub** ermöglicht es Famili
   - [2.2 Komponentenplan](#komponentenplan)
   - [2.3 Kommunikationsprozess](#kommunikationsprozess)
   - [2.4 Umsetzungsprozess](#umsetzungsprozess)
-  - [2.5 Lernerfolg](#lernerfolg)
+  - [2.5 3D Druck](#3d-druck)
 - [3. Video-Dokumentation](#video-dokumentation)
 - [4. Aufgabenteilung](#aufgabenteilung)
-- [5. Learnings & Herausforderungen](#learnings-und-herausforderungen)
+- [5. Relexion](#reflexion)
+  - [5.1 Herausforderungen](#herausforderungen)
+  - [5.2 Learnings](#learnings)
 
 ## UX-Konzeption
 
 ### Idee (Livia)
 
-Hier schreiben wir über das.
+Bereits früh hatten wir 
 
 ### Designentscheid (Livia)
 
@@ -91,6 +94,34 @@ Dieser Abschnitt ist Unterkapitel A.
    - Testläufe zur Datenübertragung und Fehlersuche.
    - Durchführen von Testwoche
 
+### 3D Druck
+
+(Fotos usw.)
+
+## Video-Dokumentation
+
+Dieser Abschnitt ist Unterkapitel A.
+
+## Aufgabenteilung (Livia)
+
+| Aufgabe          | Wer?   |
+| ---------------- | ------ |
+| Ideenfindung     | beide  |
+| UX-Design        | Livia  |
+| Hardware testing | beide  |
+| Backend          | Cédric |
+| Frontend         | Livia  |
+| 3D Druck         | beide  |
+| Zusammenbau      | Cédric |
+| Video            | Livia  |
+| Dokumentation    | beide  |
+
+## Reflexion
+
+### Herausforderungen
+
+Dieser Abschnitt ist Kapitel 1.
+
 ### Lernerfolg
 
 Wir haben beide das erste Mal mit einem Arduino MC gearbeitet deshalb war alles damit verbunden neu für mich. Zudem konnte ich viele neuen Learning im bezug auf Datenbanken SQL/PHP machen. Auf folgende zwei Learnings möchte ich gerne tiefer eingehen:<br>
@@ -144,26 +175,3 @@ SELECT
 Das war das erste Mal das ich mit einer relationalen Datebank gearbeitet habe, und dank ChatGTP war es relativ einfachen. In diesem Fall ist es nötigt damit wir die Namen über die Website ganz einfach updaten können.
 
 Livia ergänzt (mit 3D Drucker), korrigiert
-
-## Video-Dokumentation
-
-Dieser Abschnitt ist Unterkapitel A.
-
-## Aufgabenteilung (Livia)
-
-| Aufgabe          | Wer?   |
-| ---------------- | ------ |
-| Ideenfindung     | beide  |
-| UX-Design        | Livia  |
-| Hardware testing | beide  |
-| Backend          | Cédric |
-| Frontend         | Livia  |
-| 3D Druck         | beide  |
-| Zusammenbau      | Cédric |
-| Video            | Livia  |
-| Dokumentation    | beide  |
-|                  |        |
-
-## Herausforderungen
-
-Dieser Abschnitt ist Kapitel 1.

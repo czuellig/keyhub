@@ -122,7 +122,7 @@ Dieser Abschnitt ist Unterkapitel A.
 
 Dieser Abschnitt ist Kapitel 1.
 
-### Lernerfolg
+### Learnings
 
 Wir haben beide das erste Mal mit einem Arduino MC gearbeitet deshalb war alles damit verbunden neu für mich. Zudem konnte ich viele neuen Learning im bezug auf Datenbanken SQL/PHP machen. Auf folgende zwei Learnings möchte ich gerne tiefer eingehen:<br>
 

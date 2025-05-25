@@ -35,7 +35,7 @@ Hier schreiben wir über das.
 
 Dieser Abschnitt ist Unterkapitel A.
 
-### Flussdiagramm
+### Flussdiagramm (Cédric)
 
 Dieser Abschnitt ist Unterkapitel A.
 
@@ -91,10 +91,9 @@ Dieser Abschnitt ist Unterkapitel A.
    - Testläufe zur Datenübertragung und Fehlersuche.
    - Durchführen von Testwoche
 
-### Lernerfolg (Jede:r selber)
+### Lernerfolg
 
-Cédric:<br>
-Ich habe das erstemal mit einem Arduino MC gearbeitet deshalb war alles damit verbunden neu für mich. Zudem konnte ich viele neuen Learning im bezug auf Datenbanken SQL/PHP machen. Auf folgende zwei Learnings möchte ich gerne tiefer eingehen:<br>
+Wir haben beide das erste Mal mit einem Arduino MC gearbeitet deshalb war alles damit verbunden neu für mich. Zudem konnte ich viele neuen Learning im bezug auf Datenbanken SQL/PHP machen. Auf folgende zwei Learnings möchte ich gerne tiefer eingehen:<br>
 
 **1. Passwort schutz durch PHP**
 
@@ -144,6 +143,8 @@ SELECT
 
 Das war das erste Mal das ich mit einer relationalen Datebank gearbeitet habe, und dank ChatGTP war es relativ einfachen. In diesem Fall ist es nötigt damit wir die Namen über die Website ganz einfach updaten können.
 
+Livia ergänzt (mit 3D Drucker), korrigiert
+
 ## Video-Dokumentation
 
 Dieser Abschnitt ist Unterkapitel A.
@@ -152,6 +153,6 @@ Dieser Abschnitt ist Unterkapitel A.
 
 Dieser Abschnitt ist Kapitel 1.
 
-## Learnings und Herausforderungen
+## Herausforderungen
 
 Dieser Abschnitt ist Kapitel 1.

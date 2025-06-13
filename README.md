@@ -28,7 +28,7 @@ IM4 Projekt von Livia Vogt und Cédric Züllig. <br>
 
 ### Idee (Livia)
 
-Bereits früh hatten wir 
+Bereits früh hatten wir
 
 ### Designentscheid (Livia)
 
@@ -56,8 +56,7 @@ Dieser Abschnitt ist Unterkapitel A.
 | PIR-Sensor (SR602) | GPIO 7         |
 | LED 1              | GPIO 10        |
 | LED 2              | GPIO 11        |
-| LED 3              | GPIO 12        |
-| LED 3              | GPIO 12        |
+| LED 3              | GPIO 15        |
 | VCC (PIR)          | 3.3V           |
 | GND                | GND            |
 

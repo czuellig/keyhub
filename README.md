@@ -28,15 +28,48 @@ IM4 Projekt von Livia Vogt und Cédric Züllig. <br>
 
 ### Idee (Livia)
 
-Bereits früh hatten wir
+Wir haben für unsere IM-Vertiefung „Physical Computing“ eine einfache und praktische Lösung für den Familien- & Wohngemeinschaftsalltag entwickelt: eine Magnetwand am Wohnungseingang, an der jede Person beim Nach-Hause-Kommen ihren persönlichen Magneten (am Schlüsselbund) befestigt. Über eine App bzw. Website wird in Echtzeit erkannt, wer aktuell zuhause ist - oder kürzlich war usw.
 
-### Designentscheid (Livia)
+Die Idee ist aus ganz normalen Alltagssituationen entstanden.
+Wir kommen aus Grossfamilien (mit jeweils sieben Personen) und kennen das „Problem“ daher nur zu gut. Die am häufigsten gestellte Frage im Familienchat ist: „Wer ist zuhause?" Bisher muss man Nachrichten in den Familienchat schicken, warten, wer antwortet, oder gleich alle anschreiben (Zum Beispiel: "Ist jemand daheim und könnte kurz den Einkaufszettel fotografieren, den ich vergessen habe?"). Mit unserer Lösung muss niemand warten, weil auf einen Blick ersichtlich ist, wer zuhause und wer abwesend ist. So wird das Zusammenleben etwas direkter und weniger abhängig von Nachrichten in der Familiengruppe.
 
-Hier schreiben wir über das.
+Wie wir aus unseren Interviews mit der Zielgruppe herausgefunden haben, haben die Probanden oft gar keine Ahnung, wer aktuell von ihren Schützlingen vor Ort ist. Sie wünschen sich mehr Übersicht, um den Alltag besser planen zu können, ohne die einzelnen Mitglieder überwachen zu müssen.
+
+Unsere Familien sind nur ein Beispiel. Wir sehen zahlreiche weitere Verwendungszwecke für das Gerät. Z.B. für Familien mit Teenagern könnte das Gerät weitere Sicherheit und Komfort bieten: Eltern wüssten, wann ihre Kinder (spät am Abend) nach Hause gekommen sind, ohne gleich anrufen oder Nachrichten schicken zu müssen. Ausserdem hilft das Gerät dabei, dass weniger Schlüssel im Haus verloren gehen. Die Schlüssel hängen ab sofort immer am selben Ort.
+
+### Designentscheid
+
+Bei der Gestaltung haben wir uns für eine schlichte, schwarze Box entschieden. Sie soll sich optisch zurücknehmen, modern wirken und in verschiedene Wohnungen, Häuser oder Gemeinschaftsräume passen. Gleichzeitig muss sie robust und standhaft sein, weil sie täglich benutzt wird.
+
+Die Box kann in beliebiger Höhe montiert werden – passend zum Eingangsbereich. In unserem Fall ist das Design so ausgelegt, drei Magnetsensoren, drei Lichter, unser Logo und einen Bewegungssensor aufzunehmen. Das lässt jedoch beliebig auf die Anzahl der Mitglieder anpassen (pro Mitglied je ein Licht und Magnetsensor). Der Bewegungssensor hat die Funktion, die besetzten Lichter zum Leuchten zu bringen, sobald jemand sich davor befindet. So wird zum einen visuell noch mehr verstärkt, wer zuhause ist. Zum andern gibt es direktes optisches Feedback, dass das Gerät aktiv ist (und zum Beispiel das Einhängen eines Schlüssels erkannt hat).
+
+Unsere Box wurde mit einem 3D-Drucker hergestellt. Dafür haben wir das Gerät zunächst in der Software "UltiMaker Cura" entworfen – für uns etwas ganz neues, weil wir bisher keine Erfahrungen mit 3D-Druck hatten. So konnten wir das Gerät vollständig nach eigenen Vorstellungen gestalten und an unsere Zwecke anpassen.
 
 ### Vorgehensweise (Livia)
 
-Dieser Abschnitt ist Unterkapitel A.
+Am Anfang stand die Ideenfindung. In einem ersten Brainstorming haben wir verschiedene Ideen zusammengetragen und geprüft, welches am besten zum Thema „Physical Computing“ und zu uns passt. Bereits früh sind wir auf unsere Idee mit der Magnetwand gekommen und waren begeistert.
+
+Wir haben kurze Interviews mit potenziellen Nutzern geführt – in diesem Fall mit Livias Mutter und Cédrics Vater (beide in der definierten Zielgruppe ü50). Daraus wurde deutlich, welchen Nutzen das Gerät für den Alltag hat und wir konnten einige Anpassungen für die Bedienbarkeit vornehmen. Unsere Grundidee wurde allerdings bestätigt und musste daher nicht grundlegend geändert werden.
+
+Anschliessend haben wir ein Figma-Design erstellt, um die App  zunächst visuell darzustellen und die Anordnung der verschiedenen Funktionen sinnvoll zu planen.
+
+Jetzt durften wir das Makerkit kennenlernen. Vor allem für Livia war dieser Abschnitt technisches Neuland, Cédric hatte aus seiner Lehre einige Erfahrungen mit einfachen Schaltungen, aber für das weitere Vorgehen waren wir auf neues Know-how angewiesen. Zum Glück wurde im Unterricht mit Wolfgang, Jan, Jasper und Siro das passende Werkzeug bereitgestellt, um für unser Gerät relevante Bauteile auszuwählen – zum Beispiel Bewegungssensoren, LED-Lampen und Reed-Schalter (Magnetsensoren).
+
+Mit dieser Grundlage begannen wir mit der Programmierung in HTML und der Verkabelung.
+Dafür wurde zunächst das Schaltboard aufgebaut, verdrahtet und Schritt für Schritt getestet.
+Hier holten wir bei Schwierigkeiten Unterstützung im Unterricht oder bei ChatGPT, um zum Beispiel einige Anschluss-, Schalt-, oder Code-Probleme zu beheben.
+Weitere Informationen hierzu sind im Abschnitt Technische Dokumentation ausgeführt.
+
+Parallel zum technischen Aufbau wurde das Gehäuse für den 3D-Druck entworfen.
+Dafür haben wir das vorhandene Schaltboard als Referenz benutzt, mit dem Lineal ausgemessen und passend zum Gerät das Box-Design erstellt.
+Mit UltiMaker Cura wurde das 3D-Model für den Druck ausgegeben und im Anschluss ausgedruckt.
+
+Sobald alle Teile fertig waren, wurde das Gerät vollständig zusammengebaut.
+Hier kamen Tätigkeiten wie Löten, Heisskleben und Basteln zum Einsatz.
+Bei jedem dieser Arbeitsschritte haben wir das Gerät mehrfach getestet, um sicherzustellen, dass alles weiterhin funktionierte.
+
+Zum Schluss wurde die Dokumentation ausgeformuliert und das Gerät für die Präsentation in einer Videodokumentation zusammengefasst.
+So konnten wir den gesamten Ablauf nachvollziehbar darstellen und für künftige Nachbauer zugänglich machen.
 
 ### Flussdiagramm (Cédric)
 

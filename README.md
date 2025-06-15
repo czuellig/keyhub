@@ -51,7 +51,7 @@ Am Anfang stand die Ideenfindung. In einem ersten Brainstorming haben wir versch
 
 Wir haben kurze Interviews mit potenziellen Nutzern geführt – in diesem Fall mit Livias Mutter und Cédrics Vater (beide in der definierten Zielgruppe ü50). Daraus wurde deutlich, welchen Nutzen das Gerät für den Alltag hat und wir konnten einige Anpassungen für die Bedienbarkeit vornehmen. Unsere Grundidee wurde allerdings bestätigt und musste daher nicht grundlegend geändert werden.
 
-Anschliessend haben wir ein Figma-Design erstellt, um die App  zunächst visuell darzustellen und die Anordnung der verschiedenen Funktionen sinnvoll zu planen.
+Anschliessend haben wir ein Figma-Design erstellt, um die App zunächst visuell darzustellen und die Anordnung der verschiedenen Funktionen sinnvoll zu planen.
 
 Jetzt durften wir das Makerkit kennenlernen. Vor allem für Livia war dieser Abschnitt technisches Neuland, Cédric hatte aus seiner Lehre einige Erfahrungen mit einfachen Schaltungen, aber für das weitere Vorgehen waren wir auf neues Know-how angewiesen. Zum Glück wurde im Unterricht mit Wolfgang, Jan, Jasper und Siro das passende Werkzeug bereitgestellt, um für unser Gerät relevante Bauteile auszuwählen – zum Beispiel Bewegungssensoren, LED-Lampen und Reed-Schalter (Magnetsensoren).
 
@@ -73,7 +73,13 @@ So konnten wir den gesamten Ablauf nachvollziehbar darstellen und für künftige
 
 ### Flussdiagramm (Cédric)
 
-Dieser Abschnitt ist Unterkapitel A.
+![Flussdiagramm_1](/docpics/Flussdiagramm_1.png)
+
+Das sind die ursprünglich von uns erstellten Flussdiagramme. Die fertigen Lösungen sehen jedoch deutlich anders aus. Anstelle einer UPDATE-Funktion, die die Zeit in eine bestehende Zeile einträgt, wenn der Schlüssel entnommen wird, haben wir uns dazu entschieden, für jedes „Event” eine neue Zeile zu erstellen. Das ist einfacher zu programmieren und erleichtert die Auswertung der Statistiken.
+
+![Flussdiagramm_2](/docpics/Flussdiagramm_2.png)
+
+Auch beim Passwortschutz konnten wir dank PHP viel Code einsparen, da wir kein komplettes Login mit Accounts etc. benötigen.
 
 ## Technische Dokumentation
 
@@ -128,7 +134,9 @@ Dieser Abschnitt ist Unterkapitel A.
 
 ### 3D Druck
 
-(Fotos usw.)
+![3D-Druck 1](/docpics/3d_druck_1.jpeg)
+![3D-Druck 2](/docpics/3d_druck_2.jpeg)
+![3D-Druck 3](/docpics/3d_druck_3.jpeg)
 
 ## Video-Dokumentation
 

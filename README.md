@@ -68,6 +68,11 @@ Jetzt durften wir das Makerkit kennenlernen. Vor allem für Livia war dieser Abs
 
 Mit dieser Grundlage begannen wir mit der Programmierung in HTML und der Verkabelung. Dafür wurde zunächst das Schaltboard aufgebaut, verdrahtet und Schritt für Schritt getestet. Hier holten wir bei Schwierigkeiten Unterstützung im Unterricht oder bei ChatGPT, um zum Beispiel einige Anschluss-, Schalt-, oder Code-Probleme zu beheben. Bei jedem dieser Arbeitsschritte haben wir das Gerät mehrfach getestet, um sicherzustellen, dass alles weiterhin funktionierte. Weitere Informationen hierzu sind weiter unten ausgeführt.
 
+Das Verbindungsschema wurde erst finalisiert, nachdem wir den Prototypen erstellt hatten. Beim Testen und Entwickeln arbeiteten wir zunächst nur mit einem Reed-Schalter. Dann kam eine LED hinzu und schließlich noch der Bewegungssensor. Schluessendlich haben wir den Prototypen noch um zwei weitere "Slots" (je 1x Reed-Schalter und 1x LED) erweitert.
+
+Parallel zum technischen Aufbau wurde das Gehäuse für den 3D-Druck entworfen.
+Dafür haben wir das vorhandene Schaltboard als Referenz benutzt, mit dem Lineal ausgemessen und passend zum Gerät das Box-Design erstellt.
+Mit UltiMaker Cura wurde das 3D-Model für den Druck ausgegeben und im Anschluss ausgedruckt.
 Sobald unser Code gelungen war, ging es weiter zum technischen Ausbau. Hier wurde das Gehäuse für den 3D-Druck entworfen. Dafür haben wir das vorhandene Schaltboard als Referenz benutzt, mit dem Lineal ausgemessen und passend zum Gerät das Box-Design erstellt. Mit Onshape (CAD-Software) wurde das 3D-Model für den Druck ausgegeben und im Anschluss ausgedruckt. Der Druck dauerte um die 24 Stunden.
 
 Sobald alle Teile fertig waren, wurde das Gerät vollständig zusammengebaut. Hier kamen Tätigkeiten wie Löten, Heisskleben und Basteln zum Einsatz.

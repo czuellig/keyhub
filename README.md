@@ -169,7 +169,7 @@ Vor der finalen Fertigstellung wurde das Gerät mehrfach getestet, um sicherzust
 
 ## Video-Dokumentation
 
-Dieser Abschnitt ist Unterkapitel A.
+Unter folgendem Link ist die Video-Dokumentation verfügbar: https://youtu.be/T5uJqSBWVFI
 
 ## Aufgabenteilung (Livia)
 

@@ -137,9 +137,30 @@ Auch beim Passwortschutz konnten wir dank PHP viel Code einsparen, da wir kein k
 
 ### 3D Druck
 
+Der 3D-Druck spielte bei der Verwirklichung unseres Prototyps eine entscheidende Rolle. Unsere Box musste verschiedene Bauteile aufnehmen — das Schaltboard, den Bewegungssensor, die Reed-Schalter und einige LED-Lämpchen — und zugleich robust, funktional und optisch passend für den Alltagseinsatz sein. Dafür haben wir einige Handskizzen angefertigt, um unsere Ideen zu sammeln. Wir haben zunächst das vorhandene Schaltboard ausgemessen. Dazu kommen die weiteren Elemente:  Öffnungen für die Kabel, Einführungen für den Bewegungssensor und Reed-Schalter usw.
+
+_Design mit Onshape_
+
+Zunächst haben wir das Gehäuse in der CAD-Software Onshape entworfen. Onshape ermöglicht das vollständig individuelle Konstruieren von Objekten in 3D. Wir haben uns an unseren detailreichen Handskizzen orientiert. Für die Wand haben wir eine Dicke von 3mm ausgewählt.
+
 ![3D-Druck 1](/docpics/3d_druck_1.jpeg)
 ![3D-Druck 2](/docpics/3d_druck_2.jpeg)
+
+
+_Fertigung mit UltiMaker Cura_
+
+Nachdem das 3D-Design in Onshape ausgelegt und als STL-Datei exportiert wurde, wurde es in UltiMaker Cura geöffnet. Hier werden einige entscheidende Parameter für den 3D-Druck festgelegt — zum Beispiel die Druckauflösung, Füllung und Support-Strukturen — damit das Gerät am Ende stabil, passgenau und zugleich materialsparend ist.
+
+_Zusammenbau_
+
+Sobald der 3D-Druck fertiggestellt wurde, wurde das Gerät von der Druckplatte gelöst, gereinigt und für den Einbau der technischen Bauteile vorbereitet. Anschliessend wurde das zuvor zusammengebaute Schaltboard mit Bewegungsmelder, Reed-Schalter und LED-Lichtern in das Gerät eingefügt. Zum Schluss wurde alles passend gemacht, gelötet, mit (Heiss)Kleber fixiert und geprüft.
+
+_Tests und Fertigstellung_
+
+Vor der finalen Fertigstellung wurde das Gerät mehrfach getestet, um sicherzustellen, dass sämtliche Sensoren und Leuchten funktionieren, die Box robust ist und alle Teile passend sitzen. So wurde aus einer einfachen 3D-Zeichnung in Onshape und einigen technischen Bauteilen das fertige Gerät, das nun im Alltag zum Einsatz kommt. Die fertige STL-Datei ist ebenso auf Github zu finden.
+
 ![3D-Druck 3](/docpics/3d_druck_3.jpeg)
+
 
 ## Video-Dokumentation
 
@@ -216,5 +237,3 @@ SELECT
 ```
 
 Das war das erste Mal das ich mit einer relationalen Datebank gearbeitet habe, und dank ChatGTP war es relativ einfachen. In diesem Fall ist es nötigt damit wir die Namen über die Website ganz einfach updaten können.
-
-Livia ergänzt (mit 3D Drucker), korrigiert

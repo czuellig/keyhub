@@ -45,7 +45,7 @@ Die Box kann in beliebiger Höhe montiert werden – passend zum Eingangsbereich
 
 Unsere Box wurde mit einem 3D-Drucker hergestellt. Dafür haben wir das Gerät zunächst in der Software "Onshape" entworfen – für uns etwas ganz neues, weil wir bisher keine Erfahrungen mit 3D-Druck hatten. So konnten wir das Gerät vollständig nach eigenen Vorstellungen gestalten und an unsere Zwecke anpassen.
 
-_Gestaltung der Website_
+**Gestaltung der Website**
 
 Bei der Gestaltung der Website stand für uns Bedienungsfreundlichkeit an ersterstelle – insbesondere weil unsere Hauptzielgruppe ü50 ist. Daher haben wir grossen Wert darauf gelegt, das Design klar, übersichtlich und leicht nachvollziehbar aufzubereiten.
 
@@ -144,7 +144,7 @@ Auch beim Passwortschutz konnten wir dank PHP viel Code einsparen, da wir kein k
 
 Der 3D-Druck spielte bei der Verwirklichung unseres Prototyps eine entscheidende Rolle. Unsere Box musste verschiedene Bauteile aufnehmen — das Schaltboard, den Bewegungssensor, die Reed-Schalter und einige LED-Lämpchen — und zugleich robust, funktional und optisch passend für den Alltagseinsatz sein. Dafür haben wir einige Handskizzen angefertigt, um unsere Ideen zu sammeln. Wir haben zunächst das vorhandene Schaltboard ausgemessen. Dazu kommen die weiteren Elemente:  Öffnungen für die Kabel, Einführungen für den Bewegungssensor und Reed-Schalter usw.
 
-_Design mit Onshape_
+**Design mit Onshape**
 
 Zunächst haben wir das Gehäuse in der CAD-Software Onshape entworfen. Onshape ermöglicht das vollständig individuelle Konstruieren von Objekten in 3D. Wir haben uns an unseren detailreichen Handskizzen orientiert. Für die Wand haben wir eine Dicke von 3mm ausgewählt.
 
@@ -152,15 +152,15 @@ Zunächst haben wir das Gehäuse in der CAD-Software Onshape entworfen. Onshape 
 ![3D-Druck 2](/docpics/3d_druck_2.jpeg)
 
 
-_Fertigung mit UltiMaker Cura_
+**Fertigung mit UltiMaker Cura**
 
 Nachdem das 3D-Design in Onshape ausgelegt und als STL-Datei exportiert wurde, wurde es in UltiMaker Cura geöffnet. Hier werden einige entscheidende Parameter für den 3D-Druck festgelegt — zum Beispiel die Druckauflösung, Füllung und Support-Strukturen — damit das Gerät am Ende stabil, passgenau und zugleich materialsparend ist.
 
-_Zusammenbau_
+**Zusammenbau**
 
 Sobald der 3D-Druck fertiggestellt wurde, wurde das Gerät von der Druckplatte gelöst, gereinigt und für den Einbau der technischen Bauteile vorbereitet. Anschliessend wurde das zuvor zusammengebaute Schaltboard mit Bewegungsmelder, Reed-Schalter und LED-Lichtern in das Gerät eingefügt. Zum Schluss wurde alles passend gemacht, gelötet, mit (Heiss)Kleber fixiert und geprüft.
 
-_Tests und Fertigstellung_
+**Tests und Fertigstellung**
 
 Vor der finalen Fertigstellung wurde das Gerät mehrfach getestet, um sicherzustellen, dass sämtliche Sensoren und Leuchten funktionieren, die Box robust ist und alle Teile passend sitzen. So wurde aus einer einfachen 3D-Zeichnung in Onshape und einigen technischen Bauteilen das fertige Gerät, das nun im Alltag zum Einsatz kommt. Die fertige STL-Datei ist ebenso auf Github zu finden.
 
@@ -189,11 +189,11 @@ Dieser Abschnitt ist Unterkapitel A.
 
 ### Herausforderungen
 
-Dieser Abschnitt ist Kapitel 1.
+Wir hatten von Anfang an einen klaren Plan, wie das Gerät aussehen und funktionieren soll. Doch für uns lag die grösste Herausforderung in der technischen Umsetzung dieser Vorstellungen. Zum Beispiel wussten wir, dass wir gerne aus den gewonnenen Daten eine Statistik erstellen wollen — aber wie bringt man der Maschine bei, Informationen aufzunehmen, auszuwerten und passend darzustellen? Diese Fragen waren für uns als Einsteiger in Arduino, PHP und Datenbanken zunächst schwer nachvollziehbar. Sie waren der Anlass für zahlreiche Tests, Recherchen und einige „Aha-Momente“, bis wir das Gerät tatsächlich zum Laufen brachten.
 
 ### Learnings
 
-Wir haben beide das erste Mal mit einem Arduino MC gearbeitet deshalb war alles damit verbunden neu für mich. Zudem konnte ich viele neuen Learning im bezug auf Datenbanken SQL/PHP machen. Auf folgende zwei Learnings möchte ich gerne tiefer eingehen:<br>
+Wir waren komplett neu in dieser Thematik – insbesondere im Umgang mit Arduino – daher war es für uns besonders spannend, in dieser neuen Welt einzutauchen und zu erleben, wie man Elektronik, Programmierung und Daten miteinander verbinden kann. Zudem konnten wir viele neue Learning im Bezug auf Datenbanken SQL/PHP machen. Auf folgende Learnings möchten wir gerne tiefer eingehen:<br>
 
 **1. Passwort schutz durch PHP**
 
@@ -242,3 +242,10 @@ SELECT
 ```
 
 Das war das erste Mal das ich mit einer relationalen Datebank gearbeitet habe, und dank ChatGTP war es relativ einfachen. In diesem Fall ist es nötigt damit wir die Namen über die Website ganz einfach updaten können.
+
+**3. 3D-Druck**
+
+Der 3D-Druck war für uns vollkommen neues Terrain – ebenso das Arbeiten mit den dafür notwendigen Softwares. Diese Erfahrung war ausserordentlich wertvoll: Sie hat unsere technischen Fertigkeiten ebenso geschärft wie unsere Planungskompetenz.
+Mit dem Ergebnis sind wir sehr zufrieden.
+
+Gleichwohl haben wir einige Erkenntnisse gewonnen, die wir beim nächsten Mal berücksichtigen werden. Zum Beispiel wurde beim Konstruieren nicht bedacht, dass die Materialstärke Platz im Innern wegnimmt. Ausserdem hätten wir die Öffnungen für die Sensoren etwas grosszügiger gestalten können.
